@@ -108,8 +108,12 @@ header nav {
     background-color: rgb(193, 88, 39);
     border-radius: 10px;
     padding: 10px;
-    margin: 5px;
+    margin: 0px;
     font-size: small;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
 }
 /*-------------------------------------------------------------------------------------------------------*/
 a { /*style for all a href links*/
@@ -214,16 +218,6 @@ p {
     text-align: center;  /*for all ps*/
     font-size: 15px;
 }
-/*-------------------------------------------------------------------------------------------------------*/
-/* .filter h2{ dubbelkod
-    text-align: center;
-    justify-content: center;
-    padding: 10px;
-    margin: 10px;
-    display: grid;
-    background-color: rgba(180, 170, 136, 0.815);
-} */
-
 /* this is for section books by price/author ram runt om */
 .books img { 
     background-color: rgba(229, 169, 92, 0.615);
@@ -244,6 +238,7 @@ p {
     border: shadow;
     margin: 5px;
     padding: 5px;
+    object-fit: cover;
 }
 /*-------------------------------------------------------------------------------------------------------*/
 
@@ -299,6 +294,12 @@ p {
 #checkout a{ /*for the checkout button text*/
     color: white;
 }
+#cart-item li {
+    width: 150px;
+    padding: auto;
+    margin: auto;
+}
+
 /*-------------------------------------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------------------------------------*/
@@ -351,19 +352,38 @@ p {
         text-align: center;
         width: 100%;
     }
-    #sidebar { /*style for the sidebar section*/
+    #sidebar ul{ /*style for the sidebar section*/
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 10px;
-        margin: 10px;
+        padding: 20px 20px;
+        margin: auto;
         text-align: center;
-        width: 100%;
+        
     } 
     #content {
         grid-template-columns: 1fr; /*this is for the books to show under each other 1 at time in smaller screen*/
     }
-}
+
+ 
+    #sidebar ul li {
+        padding: 10px;
+        margin: 10px;
+        width: 50px;
+        height: 20px;
+    
+    }
+    #sidebar{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: auto;
+            padding: 10px;
+            text-align: center;
+        }
+    
+    }
 /*-------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------------THE END---------------------------------------------------*/
